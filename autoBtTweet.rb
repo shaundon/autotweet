@@ -25,13 +25,13 @@ tweetRecipient = "@BTCare"
 daysSinceStart = (Date.parse("01/12/2014")-Date.parse(Time.now.to_s)).to_i.abs
 
 # Get random first phrase
-phrase1 = pick_random_line("/home/benwilder/AutoBtTweet/phrase1.txt").chomp
+phrase1 = pick_random_line("phrase1.txt").chomp
 
 # Get random second phrase
-phrase2 = pick_random_line("/home/benwilder/AutoBtTweet/phrase2.txt").chomp
+phrase2 = pick_random_line("phrase2.txt").chomp
 
 # Get random hash tag
-hashtag = pick_random_line("/home/benwilder/AutoBtTweet/hashtags.txt").chomp
+hashtag = pick_random_line("hashtags.txt").chomp
 
 # Build tweet
 dynamicTweet = tweetRecipient + " " + daysSinceStart.to_s + " days " + phrase1 + " " + phrase2 + " " + hashtag
