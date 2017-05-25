@@ -19,7 +19,7 @@ $twitter = Twitter::REST::Client.new do |config|
 end
 
 # Get twitter account we will be tweeting to
-tweetRecipient = "@BTCare"
+tweetRecipient = "@PeabodyLDN"
 
 # Get the number of days since this unholy saga started
 daysSinceStart = (Date.parse("14/03/2017")-Date.parse(Time.now.to_s)).to_i.abs
