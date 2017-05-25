@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-# Creates a custom daily tweet to annoy the hell out of BTCare
+# Creates a custom daily tweet to annoy the hell out of somebody
 # @BTcare [days] [phrase1] [phrase2] [hashtag]
 
 
@@ -21,8 +21,8 @@ end
 # Get twitter account we will be tweeting to
 tweetRecipient = "@BTCare"
 
-# Get the number of days since BT disaster started
-daysSinceStart = (Date.parse("01/12/2014")-Date.parse(Time.now.to_s)).to_i.abs
+# Get the number of days since this unholy saga started
+daysSinceStart = (Date.parse("14/03/2017")-Date.parse(Time.now.to_s)).to_i.abs
 
 # Get random first phrase
 phrase1 = pick_random_line("phrase1.txt").chomp
@@ -34,7 +34,7 @@ phrase2 = pick_random_line("phrase2.txt").chomp
 hashtag = pick_random_line("hashtags.txt").chomp
 
 # Build tweet
-dynamicTweet = tweetRecipient + " " + daysSinceStart.to_s + " days " + phrase1 + " " + phrase2 + " " + hashtag
+dynamicTweet = "." + tweetRecipient + " " + daysSinceStart.to_s + " days " + phrase1 + " " + phrase2 + " " + hashtag
 
 if dynamicTweet.length>140
 	puts "ERROR: Tweet too long"
